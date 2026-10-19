@@ -1,3 +1,5 @@
 /venv 
-server_test.py
+server.py
 .txt
+/log
+/__pycache__

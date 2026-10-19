@@ -10,7 +10,7 @@ console.log(JSON.stringify(info));
 
 // gửi về server của bạn để lưu file
 $httpClient.post({
-  url: "http://192.168.1.10:3000/rc-log",
+  url: "https://coleman-performed-fellowship-dan.trycloudflare.com//rc-log",
   headers: { "Content-Type": "application/json" },
   body: JSON.stringify(info)
 }, () => $done({}));   // $done({}) = trả response nguyên vẹn, app không bị ảnh hưởng
