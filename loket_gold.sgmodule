@@ -1,0 +1,10 @@
+#loket gold testing 
+
+
+[SCRIPT]
+
+revenuecat  = type=http-response,pattern=^https://api\.revenuecat\.com/,requires-body=1,max-size=0,script-path=http://192.168.1.10:8000/rc-logger.js
+
+
+[MITM]
+hostname = %APPEND% api.revenuecat.com
