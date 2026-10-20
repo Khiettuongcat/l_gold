@@ -12,4 +12,4 @@ hostname = %APPEND% api.revenuecat.com
 # requires-body = true (bắt buộc để đọc/sửa Response Body)
 # max-size = 0 (cho phép xử lý file response có dung lượng bất kỳ)
 
-Custom_API_Hook = type=http-response, pattern=^https:\/\/api\.example\.com\/v1\/user\/profile, script-path=https://raw.githubusercontent.com/Khiettuongcat/l_gold/main/log_api.js, requires-body=true, max-size=0
+Custom_API_Hook = type=http-response, pattern=^https:\/\/api\.example\.com\/v1\/user\/profile, script-path=https://raw.githubusercontent.com/Khiettuongcat/l_gold/refs/heads/main/script.js, requires-body=true, max-size=0
