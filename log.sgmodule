@@ -1,0 +1,15 @@
+#!name = Custom API Interceptor
+#!desc = Module hỗ trợ bắt và can thiệp Response API cho Shadowrocket / Surge
+#!category = Override
+
+[MITM]
+# Điền domain API cần giải mã HTTPS vào đây (Phân cách bằng dấu phẩy)
+hostname = %APPEND% api.revenuecat.com
+
+[Script]
+# Cấu hình liên kết URL API với file Script JS
+# Type: http-response (nhận dữ liệu từ server trả về)
+# requires-body = true (bắt buộc để đọc/sửa Response Body)
+# max-size = 0 (cho phép xử lý file response có dung lượng bất kỳ)
+
+Custom_API_Hook = type=http-response, pattern=^https:\/\/api\.example\.com\/v1\/user\/profile, script-path=https://raw.githubusercontent.com/Khiettuongcat/l_gold/main/log_api.js, requires-body=true, max-size=0
