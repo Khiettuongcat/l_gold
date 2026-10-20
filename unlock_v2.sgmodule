@@ -1,0 +1,12 @@
+[Name]
+Locket Gold Unlock (Research)
+
+[Description]
+Sử dụng Script JS để sửa JSON Response của RevenueCat nhằm nghiên cứu cấu trúc dữ liệu.
+
+[MITM]
+hostname = api.revenuecat.com
+
+[Script]
+# Bắt request GET đến endpoint subscriber và chạy script JS để sửa body
+http-response https:\/\/api\.revenuecat\.com\/v1\/subscribers\/.+ script-path=https://raw.githubusercontent.com/Khiettuongcat/l_gold/refs/heads/main/ublockv2.js, timeout=60,requires-body=1,max-size=0,debug=1
